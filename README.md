@@ -1,7 +1,8 @@
 # Vite React App
 
 This is a minimal React application bootstrapped with Vite and TypeScript.
-It includes a small form component styled with Shadcn UI and Tailwind CSS.
+It includes a Shadcn-styled form that appears in a popup when you click the
+**Open Form** button.
 
 ## Development
 

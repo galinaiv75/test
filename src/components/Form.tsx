@@ -2,12 +2,17 @@ import { useState } from "react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 
-export default function Form() {
+interface FormProps {
+  onSubmitted?: () => void
+}
+
+export default function Form({ onSubmitted }: FormProps) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    alert(`Submitted: ${name} <${email}>`)
+    console.log(`Submitted: ${name} <${email}>`)
+    onSubmitted?.()
   }
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-sm mx-auto text-left">
