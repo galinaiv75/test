@@ -1,18 +1,12 @@
-import { useState } from 'react'
+import Form from './components/Form'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <div className="py-10 text-center">
+      <h1 className="mb-6 text-2xl font-bold">Shadcn Form Example</h1>
+      <Form />
+    </div>
   )
 }
 
